@@ -1,0 +1,90 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 21,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "linux-ninja-debug",
+      "displayName": "Linux Ninja Debug",
+      "description": "Debug build for Linux using Ninja",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build-linux-debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+      },
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Linux"
+      }
+    },
+    {
+      "name": "linux-ninja-release",
+      "displayName": "Linux Ninja Release",
+      "description": "Release build for Linux using Ninja",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build-linux-release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      },
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Linux"
+      }
+    },
+    {
+      "name": "windows-ninja-debug",
+      "displayName": "Windows Ninja Debug",
+      "description": "Debug build for Windows using Ninja",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build-windows-debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+      },
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Windows"
+      }
+    },
+    {
+      "name": "windows-ninja-release",
+      "displayName": "Windows Ninja Release",
+      "description": "Release build for Windows using Ninja",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build-windows-release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      },
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Windows"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "linux-ninja-debug",
+      "configurePreset": "linux-ninja-debug"
+    },
+    {
+      "name": "linux-ninja-release",
+      "configurePreset": "linux-ninja-release"
+    },
+    {
+      "name": "windows-ninja-debug",
+      "configurePreset": "windows-ninja-debug"
+    },
+    {
+      "name": "windows-ninja-release",
+      "configurePreset": "windows-ninja-release"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/main.qml</file>
+        <file>qml/Theme.qml</file>
+        <file>qml/components/ServerList.qml</file>
+        <file>qml/components/ChannelList.qml</file>
+        <file>qml/components/MemberList.qml</file>
+        <file>qml/components/StatusBar.qml</file>
+        <file>qml/components/LoginDialog.qml</file>
+        <file>qml/views/ServerView.qml</file>
+        <file>qml/views/ChatView.qml</file>
+        <file>qml/qmldir</file>
+    </qresource>
+</RCC>
