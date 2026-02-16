@@ -1,0 +1,32 @@
+{
+  "apiBaseUrl": "http://localhost:8080/api",
+  "wsBaseUrl": "ws://localhost:8080/ws",
+  "sfuSignalUrl": "http://localhost:8080/api/voice",
+  "turn": {
+    "enabled": false,
+    "urls": ["turn:turn.example.com:3478"],
+    "username": "",
+    "credential": ""
+  },
+  "features": {
+    "sfuSignaling": false,
+    "voiceChat": false,
+    "videoChat": false,
+    "screenShare": false
+  },
+  "audio": {
+    "echoCancellation": true,
+    "noiseSuppression": true,
+    "autoGainControl": true,
+    "rnnoiseEnabled": true,
+    "opusBitrate": 64000,
+    "opusFrameSize": 20
+  },
+  "video": {
+    "preferredCodec": "h264",
+    "maxWidth": 1920,
+    "maxHeight": 1080,
+    "maxFramerate": 30,
+    "hardwareAcceleration": true
+  }
+}
